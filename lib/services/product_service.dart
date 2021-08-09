@@ -7,7 +7,9 @@ class ProductService {
     Uri base_url = Uri.parse(
         'https://staging.awalmula.co.id/rest/default/V1/products?searchCriteria[pageSize]=10');
     print("masuk future");
-    var headers = {'Content-Type': 'application/json'};
+    var headers = {
+      'Content-Type': 'application/json',
+    };
     var response = await http.get(base_url, headers: headers);
 
     print(response.body);

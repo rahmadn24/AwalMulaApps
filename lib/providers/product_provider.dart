@@ -7,6 +7,10 @@ class ProductProvider with ChangeNotifier {
 
   List<ProductModel> get products => _products;
 
+  init() {
+    getProducts();
+  }
+
   set products(List<ProductModel> products) {
     _products = products;
     notifyListeners();
